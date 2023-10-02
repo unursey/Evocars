@@ -1,0 +1,206 @@
+html
+  box-sizing: border-box
+  position: relative
+  scroll-behavior: smooth
+  -webkit-overflow-scrolling: touch
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+body
+  min-width: 375px
+  min-height: 100vh
+  font-size: 16px
+  font-family: "Gotham Pro", sans-serif
+  font-weight: 400
+  line-height: 1.6
+  
+  background-color: $lightgray-color
+  color: $dark-color
+  
+  margin: 0
+  padding: 0
+
+.change-bg
+  background-color: $black-color
+  transition: 0.4s
+  
+.container 
+  max-width: 1322px
+
+img
+  max-width: 100%
+  height: auto
+
+$my-cursor-style: url('../img/icons/cursor.svg'), auto
+
+button
+  cursor: $my-cursor-style !important
+  font-family: "Gotham Pro", sans-serif
+  border: none
+  outline: none !important
+  box-shadow: none !important
+  background: transparent
+  transition: .4s
+  &:focus, &:hover    
+    transition: .4s
+
+.button
+  white-space: nowrap
+  color: $dark-color
+  &:focus, &:hover
+    background-color: $dark-color
+    color: $lightgray-color
+  &_color_yellow
+    background-color: $yellow-color
+    &:focus, &:hover
+      background-color: $dark-yellow-color
+      color: $dark-color
+  &_color_black
+    background-color: $dark-color
+    color: $yellow-color
+    border: 1px solid $yellow-color
+    &:focus, &:hover
+      background-color: $yellow-color
+      color: $dark-color
+  &_color_white
+    background-color: $lightgray-color
+    border: 1px solid $dark-color
+    &:focus, &:hover
+      background-color: $dark-color
+      color: $lightgray-color
+  &_color_fullwhite
+    background-color: $lightgray-color
+    &:focus, &:hover
+      background-color: $dark-color     
+  &_color_none
+    background-color: transparent
+    border: 1px solid $dark-color
+    &:focus, &:hover
+      background-color: $yellow-color
+      border: 1px solid $yellow-color
+      color: $dark-color
+
+a
+  color: inherit
+  text-decoration: none
+  cursor: $my-cursor-style
+  transition: .4s
+
+  &:focus, &:hover
+    outline: none
+    box-shadow: none !important
+    text-decoration: none
+    transition: .4s
+    color: $dark-yellow-color
+    svg
+      path
+        transition: .2s
+        fill: $dark-yellow-color
+
+.title
+  // @include adaptiv-font(36, 20)
+  @include unb7
+  font-size: 36px
+  font-weight: 700
+  line-height: 1.3
+.subtitle
+  // @include adaptiv-font(28, 20)
+  @include unb7
+  font-size: 28px
+  font-weight: 700
+  line-height: 1.6
+.text-title
+  // @include adaptiv-font(20, 16)
+  @include unb7
+  font-size: 20px
+  font-weight: 700
+  line-height: 1.3 
+
+.text
+  &_size_xl
+    //@include adaptiv-font(20, 16)
+    font-size: 20px
+  &_size_l
+    //@include adaptiv-font(18, 15)
+    font-size: 18px
+  &_size_ml
+    //@include adaptiv-font(18, 14)
+    font-size: 18px
+  &_size_m
+    //@include adaptiv-font(16, 14)
+    font-size: 16px
+  &_size_ms
+    //@include adaptiv-font(16, 12)
+    font-size: 16px    
+  &_size_s
+    //@include adaptiv-font(14, 12)
+    font-size: 14px
+  &_size_xs
+    //@include adaptiv-font(12, 12)
+    font-size: 12px
+
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+h1, h2, h3, p, figure, fieldset
+  margin: 0
+
+.hide
+  display: none
+
+.visually-hidden
+  position: absolute !important
+  clip: rect(1px 1px 1px 1px)
+  clip: rect(1px, 1px, 1px, 1px)
+  padding: 0 !important
+  border: 0 !important
+  height: 1px !important
+  width: 1px !important
+  overflow: hidden
+         
+.nowrap
+  white-space: nowrap
+
+// .slide-divider
+//   background-color: #DCDCDC
+//   height: 100%
+//   width: 1px
+//   opacity: 1
+//   transition: opacity 0.3s
+// .hide-divider 
+//   display: none
+
+
+
+@media screen and ( max-width: 992px )
+   
+@media screen and ( max-width: 768px )
+
+@media screen and ( max-width: 576px )
+  .container
+    padding: 0 10px
+  .title
+    font-size: 20px
+  .subtitle
+    font-size: 20px
+    line-height: 1.3
+  .text-title
+    font-size: 16px
+  .text
+    &_size_xl
+      font-size: 16px
+    &_size_l
+      font-size: 15px
+    &_size_ml
+      font-size: 14px
+    &_size_m
+      font-size: 14px
+    &_size_ms
+      font-size: 12px 
+    &_size_s
+      font-size: 12px  

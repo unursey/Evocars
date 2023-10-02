@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>Модалки</title>
+  </head>
+
+  <body class="page">
+    <div class="container">
+      <div class="modal order-modal" id="order-modal" tabindex="-1" aria-labelledby="modal-requestLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content">
+            <div class="modal-header">
+              <button class="modal__btn-close btn-close" type="button" data-bs-dismiss="modal" aria-label="Close modal"></button>
+
+              <h2 class="order-modal__title subtitle">Заказать Zeekr X</h2>
+            </div>
+
+            <div class="modal-body">
+              <section class="order-modal__section">       
+                <h3 class="order-modal__subtitle order-modal__list-title">Ваша комплектация</h3>
+                <ul class="order-modal__list">
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Zeekr X ME</p>
+                    <p class="order-modal__sum">11 000 000₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Цвет кузова</p>
+                    <p class="order-modal__sum">0₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Цвет салона</p>
+                    <p class="order-modal__sum">0₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">22 дюймовые 10-спицевые серебристые диски</p>
+                    <p class="order-modal__sum">0₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Зимний пакет (обогрев руля и второго ряда)</p>
+                    <p class="order-modal__sum">100 000₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Аудио бренд Yamaha (11 высококачественных динамиков и 1 сабвуфер)</p>
+                    <p class="order-modal__sum">100 000₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Автоматические двери</p>
+                    <p class="order-modal__sum">100 000₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Z Sport комплект (black roof, R22 c Brembo + перфорированные тормозные диски, адаптивные спортивные сиденья из алькантары)</p>
+                    <p class="order-modal__sum">100 000₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__text">Молдинг</p>
+                    <p class="order-modal__sum">100 000₽</p>
+                  </li>
+
+                  <li class="order-modal__item">
+                    <p class="order-modal__total">Итого:</p>
+                    <p class="order-modal__total-sum">12 000 000 ₽ </p>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="order-modal__section">
+                <h3 class="order-modal__subtitle order-modal__info-title">Ваши данные</h3>
+
+                <div class="modal__form form">
+                  <div class="modal__form-block form__block">
+                    <div class="modal__name-block">
+                      <label class="modal__label form__label" for="first_name">Ваше имя</label>
+                      <input class="modal__input form__input" type="text" id="first_name" name="first_name" placeholder="Имя" required>
+                    </div>    
+            
+                    <div class="modal__phone-block">
+                      <label class="modal__label form__label" for="phone">Ваш номер телефона</label>
+                      <input class="modal__input form__input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                    </div>
+
+                    <div class="modal__comment-block">
+                      <label class="modal__label form__label" for="comment">Комментарий к заявке</label>
+                      <textarea class="modal__textarea form__textarea" rows="1" id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="modal-footer">
+              <div class="modal__button-block form__button-block">
+                <button class="modal__button button button_color_yellow form__button" type="submit" form="order">Оформить заявку</button>
+                <p class="modal__button-text form__button-text text text_size_xs">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></p>
+              </div>             
+            </div>
+
+          </form>      
+        </div>
+      </div>
+
+      <div class="modal call-modal" id="call-modal" tabindex="-1" aria-labelledby="modal-requestLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content">
+            <div class="modal-header">
+              <button class="modal__btn-close btn-close" type="button" data-bs-dismiss="modal" aria-label="Close modal"></button>
+              <h2 class="modal__title subtitle">Заказать обратный звонок</h2>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal__form form">
+                <div class="modal__form-block form__block">
+                  <div class="modal__name-block">
+                    <label class="modal__label form__label" for="first_name">Ваше имя</label>
+                    <input class="modal__input form__input" type="text" id="first_name" name="first_name" placeholder="Имя" required>
+                  </div>    
+          
+                  <div class="modal__phone-block">
+                    <label class="modal__label form__label" for="phone">Ваш номер телефона</label>
+                    <input class="modal__input form__input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                  </div>
+
+                  <div class="modal__comment-block">
+                    <label class="modal__label form__label" for="comment">Комментарий к заявке</label>
+                    <textarea class="modal__textarea form__textarea" rows="1" id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="modal__button-block form__button-block">
+                  <button class="modal__button button button_color_yellow form__button" type="submit">Заказать звонок</button>
+                  <p class="modal__button-text form__button-text text text_size_xs">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </div>
+          </form>      
+        </div>
+      </div>
+    
+      <div class="modal test-modal" id="test-modal" tabindex="-1" aria-labelledby="modal-requestLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content">
+            <div class="modal-header">
+              <button class="modal__btn-close btn-close" type="button" data-bs-dismiss="modal" aria-label="Close modal"></button>
+              <h2 class="modal__title subtitle">Записаться на тест-драйв</h2>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal__form form">
+                <div class="modal__form-block form__block">
+                  <div class="modal__name-block">
+                    <label class="modal__label form__label" for="first_name">Ваше имя</label>
+                    <input class="modal__input form__input" type="text" id="first_name" name="first_name" placeholder="Имя" required>
+                  </div>    
+          
+                  <div class="modal__phone-block">
+                    <label class="modal__label form__label" for="phone">Ваш номер телефона</label>
+                    <input class="modal__input form__input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                  </div>
+
+                  <div class="modal__comment-block">
+                    <label class="modal__label form__label" for="comment">Комментарий к заявке</label>
+                    <textarea class="modal__textarea form__textarea" rows="1" id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="modal__button-block form__button-block">
+                  <button class="modal__button button button_color_yellow form__button" type="submit">Оставить заявку</button>
+                  <p class="modal__button-text form__button-text text text_size_xs">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </div>
+          </form>      
+        </div>
+      </div>
+
+      <div class="modal leasing-modal" id="leasing-modal" tabindex="-1" aria-labelledby="modal-requestLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content">
+            <div class="modal-header">
+              <button class="modal__btn-close btn-close" type="button" data-bs-dismiss="modal" aria-label="Close modal"></button>
+              <h2 class="modal__title subtitle">Оставить заявку на лизинг</h2>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal__form form">
+                <div class="modal__form-block form__block">
+                  <div class="modal__name-block">
+                    <label class="modal__label form__label" for="first_name">Ваше имя</label>
+                    <input class="modal__input form__input" type="text" id="first_name" name="first_name" placeholder="Имя" required>
+                  </div>    
+          
+                  <div class="modal__phone-block">
+                    <label class="modal__label form__label" for="phone">Ваш номер телефона</label>
+                    <input class="modal__input form__input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                  </div>
+
+                  <div class="modal__comment-block">
+                    <label class="modal__label form__label" for="comment">Комментарий к заявке</label>
+                    <textarea class="modal__textarea form__textarea" rows="1" id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="modal__button-block form__button-block">
+                  <button class="modal__button button button_color_yellow form__button" type="submit">Оставить заявку</button>
+                  <p class="modal__button-text form__button-text text text_size_xs">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </div>
+          </form>      
+        </div>
+      </div>
+
+      <div class="modal choice-modal" id="choice-modal" tabindex="-1" aria-labelledby="modal-requestLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content">
+            <div class="modal-header">
+              <button class="modal__btn-close btn-close" type="button" data-bs-dismiss="modal" aria-label="Close modal"></button>
+              <h2 class="modal__title subtitle">Оставить заявку на индивидуальный подбор</h2>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal__form form">
+                <div class="modal__form-block form__block">
+                  <div class="modal__name-block">
+                    <label class="modal__label form__label" for="first_name">Ваше имя</label>
+                    <input class="modal__input form__input" type="text" id="first_name" name="first_name" placeholder="Имя" required>
+                  </div>    
+          
+                  <div class="modal__phone-block">
+                    <label class="modal__label form__label" for="phone">Ваш номер телефона</label>
+                    <input class="modal__input form__input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                  </div>
+
+                  <div class="modal__comment-block">
+                    <label class="modal__label form__label" for="comment">Комментарий к заявке</label>
+                    <textarea class="modal__textarea form__textarea" rows="1" id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="modal__button-block form__button-block">
+                  <button class="modal__button button button_color_yellow form__button" type="submit">Оставить заявку</button>
+                  <p class="modal__button-text form__button-text text text_size_xs">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </div>
+          </form>      
+        </div>
+      </div>    
+
+      <div class="modal service-modal" id="service-modal" tabindex="-1" aria-labelledby="modal-requestLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content">
+            <div class="modal-header">
+              <button class="modal__btn-close btn-close" type="button" data-bs-dismiss="modal" aria-label="Close modal"></button>
+              <h2 class="modal__title subtitle">Подтвердить заявку на услугу Шиномонтаж</h2>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal__form form">
+                <div class="modal__form-block form__block">
+                  <div class="modal__name-block">
+                    <label class="modal__label form__label" for="first_name">Ваше имя</label>
+                    <input class="modal__input form__input" type="text" id="first_name" name="first_name" placeholder="Имя" required>
+                  </div>    
+          
+                  <div class="modal__phone-block">
+                    <label class="modal__label form__label" for="phone">Ваш номер телефона</label>
+                    <input class="modal__input form__input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                  </div>
+
+                  <div class="modal__comment-block">
+                    <label class="modal__label form__label" for="comment">Комментарий к заявке</label>
+                    <textarea class="modal__textarea form__textarea" rows="1" id="comment" name="comment" placeholder="Комментарий" required></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="modal__button-block form__button-block">
+                  <button class="modal__button button button_color_yellow form__button" type="submit">Оставить заявку</button>
+                  <p class="modal__button-text form__button-text text text_size_xs">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </div>
+          </form>      
+        </div>
+      </div>     
+    
+
+      <div class="button-block" style="display: flex; gap: 20px; padding: 50px; flex-direction: column; width: 350px">
+        <button class="button button_color_yellow" data-bs-toggle="modal" data-bs-target="#order-modal">Заказать машину</button>
+        <button class="button button_color_black" data-bs-toggle="modal" data-bs-target="#call-modal">Заказать звонок</button>
+        <button class="button button_color_white" data-bs-toggle="modal" data-bs-target="#test-modal">Заказать тест-драйв</button>
+        <button class="button button_color_yellow" data-bs-toggle="modal" data-bs-target="#leasing-modal">Заказать лизинг</button>
+        <button class="button button_color_white" data-bs-toggle="modal" data-bs-target="#choice-modal">Заказать подбор</button>
+        <button class="button button_color_black" data-bs-toggle="modal" data-bs-target="#service-modal">Заказать сервис</button>
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mask.js"></script>
+  </body>
+</html>

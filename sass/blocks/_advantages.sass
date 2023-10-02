@@ -1,0 +1,57 @@
+.advantages
+  color: $dark-color
+  background-color: $lightgray-color
+  &__title
+    max-width: 730px
+    margin-bottom: 60px
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 48px 20px
+  &__block-img
+    width: 140px
+    height: 140px
+    margin-bottom: 20px 
+  &__subtitle
+    font-size: 20px
+    @include unb7
+    margin-bottom: 33px
+  &__text
+    font-size: 16px
+    color: $darkgray-color
+
+@media screen and ( max-width: 1200px )
+  .advantages
+    &__list
+      grid-template-columns: repeat(3, 1fr)
+    &__block-img
+      width: 120px
+      height: 120px
+
+@media screen and ( max-width: 992px )
+  .advantages
+    &__block-img
+      width: 100px
+      height: 100px
+
+@media screen and ( max-width: 768px )
+  .advantages
+    &__subtitle
+      margin-bottom: 16px
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+
+@media screen and ( max-width: 576px )
+  .advantages
+    &__title
+      margin-bottom: 40px
+    &__subtitle
+      font-size: 14px 
+    &__list
+      gap: 28px 19px
+    &__text
+      font-size: 12px
+    &__block-img
+      width: 80px
+      height: 80px
+      margin-bottom: 10px   

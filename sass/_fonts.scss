@@ -1,0 +1,96 @@
+
+@font-face {
+  font-display: swap;
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/unbounded-v6-cyrillic_latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/unbounded-v6-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/unbounded-v6-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/unbounded-v6-cyrillic_latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/unbounded-v6-cyrillic_latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url('../fonts/unbounded-v6-cyrillic_latin-700.svg#Unbounded') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/gotham-pro-regular.eot'); /* IE9 Compat Modes */
+  src: local('Gotham Pro'),
+       url('../fonts/gotham-pro-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham-pro-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/gotham-pro-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/gotham-pro-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Stolzl';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/stolzl-regular.eot'); /* IE9 Compat Modes */
+  src: local('Stolzl normal'),
+       url('../fonts/stolzl-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/stolzl-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/stolzl-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/stolzl-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Gotham Pro';
+  font-style: light;
+  font-weight: 300;
+  src: url('../fonts/gotham-pro-light.eot'); /* IE9 Compat Modes */
+  src: local('Gotham Pro light'),
+       url('../fonts/gotham-pro-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham-pro-light.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/gotham-pro-light.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/gotham-pro-light.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Gotham Pro';
+  font-style: medium;
+  font-weight: 500;
+  src: url('../fonts/gotham-pro-medium.eot'); /* IE9 Compat Modes */
+  src: local('Gotham Pro Medium'),
+       url('../fonts/gotham-pro-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham-pro-medium.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/gotham-pro-medium.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/gotham-pro-medium.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Stolzl Book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/stolzl-book.eot'); /* IE9 Compat Modes */
+  src: local('Stolzl Book'),
+       url('../fonts/stolzl-book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/stolzl-book.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('../fonts/stolzl-book.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('../fonts/stolzl-book.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@mixin unb7 {
+	font-family: 'Unbounded';
+}
+
+@mixin got4 {
+	font-family: 'Gotham Pro';
+}
+
+
+@mixin stol4 {
+	font-family: 'Stolzl';
+}
+
+@mixin stolb {
+	font-family: 'Stolzl Book';
+}

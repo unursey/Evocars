@@ -1,0 +1,243 @@
+.present 
+  position: relative 
+  padding-top: 197px
+  padding-bottom: 266px
+  overflow: hidden
+  background-color: $dark-color
+  color: $white-color
+  margin-bottom: -2px
+  &::after
+    position: absolute
+    content: ''
+    bottom: 0
+    height: 30%
+    width: 100%
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%, #000000 100%)
+    z-index: 200
+  &__container
+    z-index: 210
+    position: relative
+    text-align: center
+  &__block-title
+    max-width: 600px
+    margin: 0 auto
+    padding-top: 110px
+    margin-bottom: 40px
+  &__title
+    display: flex
+    flex-direction: column
+    @include unb7
+    font-weight: 700
+    line-height: 130%
+    text-transform: uppercase
+    color: $light-color
+    margin-bottom: 12px
+    text-align: left
+    &-one
+      font-size: 36px
+    &-two
+      font-size: 34px
+  &__catalog   
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    text-align: left
+  &__button
+    position: relative
+    padding: 8px 62px 8px 28px
+    flex-shrink: 0
+    align-self: center
+    border-radius: 31px
+    &:after
+      position: absolute
+      content: ''
+      width: 24px
+      height: 24px
+      right: 28px
+      top: 50%
+      transform: translateY(-50%)
+      background-image: url('../img/icons/arrow.svg')
+      background-size: contain
+      background-repeat: no-repeat
+  &__slider
+    position: relative    
+  &__slider-image
+    margin: 0 auto
+    max-width: 650px
+    height: 328px
+    margin-bottom: 35px
+    img
+      object-fit: contain
+  &__slider-list
+    z-index: 0
+  &__slider-item
+    width: 100%
+  &__slider-info
+    height: 120px
+    max-width: 1125px    
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    gap: 10px
+  &__slider-name
+    text-align: left
+    max-width: 210px
+    font-weight: 500
+    a    
+      font-size: 24px 
+  &__slider-link
+    display: flex
+    flex-wrap: nowrap
+    font-size: 16px
+    line-height: 20px
+    a
+      display: flex
+      position: relative
+      padding-right: 24px
+      &:after
+        position: absolute
+        top: 0
+        right: 0
+        content: ''
+        width: 24px
+        height: 24px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.5 9L14.5 12L11.5 15' stroke='%23FEFDFD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+        background-repeat: no-repeat
+        background-size: contain
+        transition: .4s
+      span
+        display: none
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.5 9L14.5 12L11.5 15' stroke='%23D2AC09' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  &__line
+    position: absolute
+    width: 100%
+    bottom: 400px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 200
+    min-width: 800px        
+  &__button-next, &__button-prev
+    position: absolute
+    top: 145px
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: rgba(248, 248, 248, 0.29)
+    background-repeat: no-repeat
+    background-size: 24px
+    background-position: center
+    cursor: $my-cursor-style
+    transition: .4s
+    z-index: 10
+    &:hover
+      background-color: rgba(248, 248, 248, 0.53)
+      box-shadow: 0px 1px 16px rgba(255, 255, 255, 0.38)
+  &__button-next
+    right: 15.5%
+    background-image: url('../img/icons/slider-arrow.svg')
+  &__button-prev
+    left: 15.5%
+    background-image: url('../img/icons/slider-arrow.svg')
+    transform: matrix(-1, 0, 0, 1, 0, 0) 
+
+@media screen and ( max-width: 1200px )
+  .present
+    &__slider-info
+      max-width: 900px
+    &__button-next
+      right: 5%
+    &__button-prev
+      left: 5%  
+
+@media screen and ( max-width: 992px )
+  .present
+    padding: 64px 0 206px 0
+    &__block-title
+      max-width: 500px
+      padding-top: 120px  
+    &__title      
+      &-one
+        font-size: 30px
+      &-two
+        font-size: 29px 
+    &__slider-info
+      height: 185px
+      flex-direction: column
+      gap: 20px
+      align-items: center
+    &__slider-name
+      max-width: 80%
+      margin-bottom: 10px 
+    &__slider-image
+      max-width: 400px
+      height: 200px
+    &__slider-link
+      font-size: 14px
+    &__button-next, &__button-prev
+      top: 230px
+    &__button-next
+      right: 15%
+    &__button-prev
+      left: 15% 
+    
+@media screen and ( max-width: 820px )
+  .present
+    &__slider-image
+      max-width: 300px
+      height: 160px
+      margin-bottom: 20px
+    &__button-next, &__button-prev
+      top: 180px
+      width: 30px
+      height: 30px
+      background-size: 15px
+      &:hover
+        background-color: rgba(248, 248, 248, 0.29)
+        box-shadow: none
+    &__line
+      bottom: 380px
+
+@media screen and ( max-width: 576px )
+  .present
+    //overflow-y: visible
+    padding: 64px 0 130px 0
+    &::after
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 90%)
+      height: 30%
+    &__block-title
+      max-width: 350px
+      padding-top: 80px
+    &__title      
+      &-one
+        font-size: 21px
+      &-two
+        font-size: 20px      
+    &__slider-image
+      max-width: 273px
+      height: 150px
+    &__slider-name
+      a    
+        font-size: 16px  
+    &__slider-link
+      a
+        color: $dark-yellow-color
+        span
+          display: block 
+        &:after
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.5 9L14.5 12L11.5 15' stroke='%23D2AC09' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+    &__catalog
+      flex-direction: column
+    &__button
+      align-self: flex-start
+    &__button-next, &__button-prev     
+      top: 170px
+    &__button-next
+      right: 0
+    &__button-prev
+      left: 0  
+    &__line
+      bottom: 310px
+      opacity: 0.7
+ 

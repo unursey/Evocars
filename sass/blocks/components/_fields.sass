@@ -1,0 +1,27 @@
+.fields
+  position: relative
+  z-index: 3
+  height: 100%
+  border-radius: 8px 8px 0px 0px
+  &:hover
+    //transition: .4s
+    ul.show
+      visibility: visible
+      opacity: 1
+      //transition: .4s    
+  &__btn
+    height: 100%
+    padding: 0
+  &__list
+    visibility: hidden
+    position: absolute
+    width: max-content
+    color: $dark-color
+    border-radius: 0px 10px 10px 10px
+    padding: 24px 19px
+    opacity: 0
+    left: 0
+    top: 40px
+    li:not(:last-child)
+      margin-bottom: 16px
+

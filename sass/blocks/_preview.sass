@@ -1,0 +1,148 @@
+.preview
+  padding: 53px 0 85px
+  position: relative
+  &__container
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 80px
+  &__bg-top, &__bg-bottom
+    position: absolute
+    left: 0
+    right: 0
+    z-index: -1
+  &__bg-top
+    height: 30%
+    top: 0
+    background: linear-gradient(0deg, #EAEAEA 8.39%, rgba(223, 223, 223, 0.19) 52.84%, rgba(217, 217, 217, 0) 76.67%)
+    transform: rotate(180deg)
+  &__bg-bottom
+    height: 40%
+    bottom: 0
+    background: linear-gradient(0deg, #EAEAEA 12.29%, rgba(223, 223, 223, 0.19) 54.32%, rgba(217, 217, 217, 0) 76.85%)
+  &__top-block
+    position: absolute
+    top: 0
+    display: flex
+    flex-direction: column
+    gap: 16px
+  &__title
+    line-height: 1.6
+    font-size: 36px
+  &__icon
+    width: 100px
+    height: 100px
+    svg
+      width: 100%
+      height: 100%
+      object-fit: contain
+      circle
+        fill: none  
+  &__slider-block
+    max-width: 886px
+    width: 100%
+    margin: 0 auto
+  &__slider     
+    position: relative      
+    padding: 0 40px
+    height: 328px
+    margin-bottom: 26px
+  &__slider-item
+    display: flex
+    justify-content: center
+    height: 100%
+  &__slider-image
+    max-width: 662px
+    img
+      max-width: 100%
+      height: 100%
+      object-fit: contain
+  &__slider-list
+    z-index: 0
+  &__slider-item
+    width: 100%
+  &__slider-more
+    display: flex
+    justify-content: center
+  &__button
+    display: block
+    max-width: max-content
+    padding: 12px 37px
+    border-radius: 24px
+    font-size: 16px
+    align-self: flex-end
+  &__button-next, 
+  &__button-prev
+    position: absolute
+    bottom: 50%
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-repeat: no-repeat
+    background-size: 24px
+    background-position: center
+    cursor: $my-cursor-style
+    transition: .4s
+    z-index: 10
+    &:hover, &:focus
+      background-color: rgba(112, 112, 112, 0.34)
+      box-shadow: 0px 1px 16px rgba(255, 255, 255, 0.38)
+  &__button-next
+    right: 0
+    background-image: url('../img/icons/product-slider-arrow.svg')
+    transform: matrix(-1, 0, 0, 1, 0, 0) 
+  &__button-prev
+    left: 0
+    background-image: url('../img/icons/product-slider-arrow.svg')
+
+@media screen and ( max-width: 768px )
+  .preview
+    &__container
+      gap: 40px
+    &__top-block
+      position: static
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+    &__button
+      order: 1
+      align-self: center
+    &__slider
+      padding: 0 35px 40px
+      height: 250px   
+    &__button-next
+      bottom: 0
+      right: calc(50% - 46px)
+    &__button-prev
+      bottom: 0
+      left: calc(50% - 46px)
+        
+@media screen and ( max-width: 576px )
+  .preview
+    padding: 29px 0 20px
+    &__container
+      gap: 16px
+    &__breadcrumb
+      margin-bottom: 30px
+    &__title-block
+      text-align: right
+      gap: 8px
+      order: 2
+    &__title
+      font-size: 24px
+    &__icon
+      width: 60px
+      height: 60px
+      order: 1
+      svg
+        circle
+          fill: $lightgray-color
+    &__button
+      font-size: 12px
+      padding: 9px 24px
+    &__slider-block
+      padding-top: 50px  
+    &__slider
+      height: 200px

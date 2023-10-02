@@ -1,0 +1,82 @@
+.category
+  &__title
+    margin-bottom: 40px
+  &__content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    margin-bottom: 60px
+  &__card
+    &:not(:last-child):not(:nth-last-child(2))
+      border-bottom: 1px solid #DCDCDC
+    &:nth-child(2n+1)
+      padding: 0 90px 50px 53px
+      border-right: 1px solid #DCDCDC
+    &:nth-child(2n)
+      padding: 0 53px 50px 90px
+    &:not(:first-child):not(:nth-child(2))
+      padding-top: 60px
+    &:last-child,
+    &:nth-last-child(2)
+      padding-bottom: 0
+  &__breadcrumb
+    margin-bottom: 60px 
+
+@media screen and ( max-width: 1200px )        
+  .category
+    &__card    
+      &:nth-child(2n+1)
+        padding-left: 30px 
+        padding-right: 30px
+      &:nth-child(2n)
+        padding-left: 30px
+        padding-right: 30px
+
+@media screen and ( max-width: 992px )
+  .category
+    &__card
+      &:nth-child(2n+1)
+        padding-left: 20px 
+        padding-right: 20px
+      &:nth-child(2n)
+        padding-left: 20px
+        padding-right: 20px
+    &__button 
+      width: 140px
+      height: 140px  
+
+@media screen and ( max-width: 576px )
+  .category
+    &__title
+      margin-bottom: 20px  
+    &__card
+      position: relative
+      padding-top: 0
+      &:nth-child(2n+1)
+        padding: 0 10px 0 0
+      &:nth-child(2n)
+        padding: 0 0px 0 10px
+      &:not(:first-child):not(:nth-child(2))
+        padding-top: 0  
+      &:last-child,
+      &:nth-last-child(2)
+        padding-bottom: 0
+      &:not(:last-child):not(:nth-last-child(2))
+        border-bottom: none
+        &::after
+          position: absolute
+          content: ''
+          bottom: -20px
+          left: 0
+          right: 0
+          width: 100%
+          border-bottom: 1px solid #DCDCDC 
+        &:nth-child(2n+1)
+          &::after
+            width: calc(100% + 2px)      
+    &__content
+      row-gap: 40px
+      padding-bottom: 20px
+      margin-bottom: 20px
+      border-bottom: 1px solid #DCDCDC
+    &__breadcrumb
+      margin-bottom: 30px   

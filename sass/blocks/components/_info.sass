@@ -1,0 +1,60 @@
+.info
+  display: flex
+  gap: 96px
+  text-align: left
+  &__block
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 20px 
+    p
+      font-weight: 300
+      span
+        font-weight: 500
+    &:not(:last-child)
+      &:after 
+        position: absolute
+        content: ''
+        right: -48px
+        top: 17px
+        border: 1px solid $darkgray-color
+        height: 40px
+
+@media screen and ( max-width: 1200px )
+  .info
+    gap: 50px
+    &__block  
+      &:not(:last-child)
+        &:after 
+          right: -25px  
+
+@media screen and ( max-width: 768px )
+  .info
+    gap: 40px
+    &__block  
+      &:not(:last-child)
+        &:after 
+          right: -20px 
+
+@media screen and ( max-width: 576px )
+  .info
+    gap: 28px
+    justify-content: center
+    &__block
+      flex-basis: min-content
+      &:not(:last-child)
+        &:after 
+          right: -14px
+          top: 5px
+    &__reserve
+      order: 1
+    &__power
+      order: 3
+    &__time
+      order: 4
+      &::after
+        display: none
+    &__speed
+      order: 2
+    &__trunk
+      display: none            

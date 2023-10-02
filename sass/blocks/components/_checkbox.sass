@@ -1,0 +1,38 @@
+.checkbox
+  &__label
+    font-size: 14px
+    line-height: 24px
+    &:not(:last-child)
+      margin-bottom: 14px
+  &__text
+    position: relative 
+    padding-left: 40px
+  &__input
+    position: absolute
+    z-index: -1
+    opacity: 0
+  &__input + &__text
+    cursor: $my-cursor-style
+    align-items: center
+    user-select: none
+  &__input + &__text:before
+    cursor: $my-cursor-style
+    position: absolute
+    content: ''
+    top: 0
+    left: 0  
+    width: 24px
+    height: 24px
+    border: 2px solid #FFD938
+    border-radius: 5px
+
+  &__input:checked + &__text:after
+    position: absolute
+    content: ''
+    top: 5.71px
+    left: 5.71px
+    width: 12.57px
+    height: 12.57px
+    background-color: #FFD938
+    border-radius: 2px
+    z-index: 2

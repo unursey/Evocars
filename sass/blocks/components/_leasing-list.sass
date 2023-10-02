@@ -1,0 +1,56 @@
+.leasing-list
+  display: grid
+  grid-template-areas: 'title-one title-two title-three title-four' 'text-one text-two text-three text-four'
+  grid-auto-rows: auto
+  gap: 24px 20px
+  &__title-block
+    display: flex
+    flex-direction: column
+    height: max-content
+    gap: 24px
+    &_one
+      grid-area: title-one
+    &_two
+      grid-area: title-two
+    &_three
+      grid-area: title-three
+    &_four
+      grid-area: title-four
+  &__text 
+    &_one
+      grid-area: text-one
+    &_two
+      grid-area: text-two
+    &_three
+      grid-area: text-three
+    &_four
+      grid-area: text-four  
+  &__img
+    width: 100px
+    height: 100px
+    img
+      object-fit: contain
+  &__title
+    font-weight: 500
+    line-height: 1.6
+
+@media screen and ( max-width: 992px )
+  .leasing-list
+    grid-template-areas: 'title-one title-two' 'text-one text-two' 'title-three title-four' 'text-three text-four'
+
+@media screen and ( max-width: 768px )
+  .leasing-list
+    grid-template-columns: repeat(2, 1fr)
+    &__img
+      width: 80px
+      height: 80px
+
+@media screen and ( max-width: 576px )
+  .leasing-list
+    gap: 19px
+    margin-bottom: 40px
+    &__img
+      width: 60px
+      height: 60px
+
+      

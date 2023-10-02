@@ -1,0 +1,109 @@
+.test-drive
+  &_theme_dark
+    padding: 90px 0
+    background-color: $dark-color
+    color: $lightgray-color
+  &_theme_light
+    padding: 70px 0 
+    background-color: $lightgray-color
+    color: $dark-color
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 60px
+  &__title
+    display: flex
+    flex-direction: column
+    margin-bottom: 60px
+    line-height: 1.6
+  &__text
+    font-size: 16px     
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px 21px
+    counter-reset: my-counter
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 16px
+    padding-left: 52px
+    padding-top: 6px
+    &:before
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      width: 32px
+      height: 32px
+      line-height: 32px
+      border-radius: 50%
+      background-color: $yellow-color
+      text-align: center
+      color: $dark-color
+      @include unb7
+      font-size: 20px
+      content: counter(my-counter)
+      counter-increment: my-counter
+  &__button
+    display: flex
+    position: relative
+    font-size: 16px
+    padding: 16px 62px 16px 28px
+    align-self: flex-start
+    border-radius: 31px
+    &:after
+      position: absolute
+      content: ''
+      width: 24px
+      height: 24px
+      right: 28px
+      top: 50%
+      transform: translateY(-50%)
+      background-image: url('../img/icons/arrow.svg')
+      background-size: contain
+      background-repeat: no-repeat
+  &__add-container
+    display: flex
+    flex-direction: column
+    gap: 80px
+  &__add-list
+    padding-left: 25px
+    list-style-type: disc
+  &__add-title
+    margin-bottom: 40px
+  &__page-block
+    display: flex
+    flex-direction: column
+    gap: 40px
+  &__page-text
+    font-size: 16px  
+
+@media screen and ( max-width: 992px )
+  .test-drive
+    &__list
+      grid-template-columns: repeat(2, 1fr)   
+
+@media screen and ( max-width: 576px )
+  .test-drive
+    &_theme_dark
+      padding: 60px 0 64px
+      background-color: $black-color
+    &_theme_light
+      padding: 40px 0 
+    &__container
+      gap: 40px
+    &__title
+      margin-bottom: 40px
+    &__list
+      grid-template-columns: 1fr
+      &_hide
+        display: none
+    &__button
+      font-size: 14px
+      align-self: center
+      &_hide
+        display: none
+    &__add-list
+      padding-left: 19px    

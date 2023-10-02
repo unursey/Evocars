@@ -1,0 +1,29 @@
+.new-page
+  position: relative
+  padding: 170px 0 70px
+  &__title-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    margin-bottom: 40px
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 80px
+  &__subtitle
+    margin-bottom: 40px
+  &__breadcrumb
+    margin-bottom: 60px   
+
+@media screen and ( max-width: 992px )
+  .new-page
+    padding-top: 84px
+
+@media screen and ( max-width: 576px )
+  .new-page
+    padding-bottom: 40px
+    &__container
+      gap: 40px
+    &__breadcrumb
+      margin-bottom: 30px     

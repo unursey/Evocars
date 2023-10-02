@@ -1,0 +1,55 @@
+input
+  outline: none
+  &:focus
+    outline: none
+    box-shadow: none !important
+    &::-webkit-input-placeholder 
+      opacity: 0 
+      transition: opacity 0.5s ease
+    &::-moz-placeholder          
+      opacity: 0 
+      transition: opacity 0.5s ease
+    &:-moz-placeholder           
+      opacity: 0 
+      transition: opacity 0.5s ease
+    &:-ms-input-placeholder      
+      opacity: 0 
+      transition: opacity 0.5s ease
+
+  &[type="number"]
+    -moz-appearance: textfield
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+    &:hover, &:focus
+      -moz-appearance: number-input
+  &[type=tel],
+  &[type=text]
+    &:focus
+      box-shadow: none
+
+textarea
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder     
+    color: $dark-color
+    opacity: 0.5
+    transition: opacity 0.5s ease 
+    transition: opacity 0.5s ease
+  &:focus
+    outline: none
+    box-shadow: none !important
+    &::-webkit-input-placeholder 
+      opacity: 0 
+      transition: opacity 0.5s ease
+    &::-moz-placeholder          
+      opacity: 0 
+      transition: opacity 0.5s ease
+    &:-moz-placeholder           
+      opacity: 0 
+      transition: opacity 0.5s ease
+    &:-ms-input-placeholder      
+      opacity: 0 
+      transition: opacity 0.5s ease

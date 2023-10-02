@@ -1,0 +1,14 @@
+.breadcrumb-list
+  display: flex
+  flex-wrap: wrap
+  a
+    color: $darkgray-color
+    &:hover
+      color: $dark-yellow-color
+  &__item
+    font-size: 14px
+    &:not(:last-child):after
+      padding: 6px
+      content: "/"
+    &:last-child
+      color: #C3C3C3 

@@ -1,0 +1,193 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 1000
+  padding: 10px 0
+  transition: .4s
+  &_theme_dark
+    background-color: transparent
+  &_theme_light
+    background-color: $lightgray-color  
+  &__container
+    display: grid
+    column-gap: 30px
+    row-gap: 16px
+    grid-template-areas: "logo address address" "logo menu button"    
+  &__container-mobile
+      display: none
+      justify-content: space-between
+      align-items: center  
+  &__block-logo
+    @include unb7
+    height: 45px
+    grid-area: logo
+    display: flex
+    align-self: center
+    font-weight: 700
+  &__logo-link
+    img
+      height: 100%
+      object-fit: contain
+  &__block-address
+    color: $gray-color
+    grid-area: address
+    display: flex
+    gap: 40px
+    align-items: center
+    justify-content: space-between
+    padding-bottom: 13px
+    border-bottom: 1px solid #DCDCDC
+  &__block
+    display: flex
+    text-align: center
+    gap: 40px
+  &__social, &__block-phone
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+  &__social
+    font-size: 18px  
+  &__block-phone
+    text-align: left  
+  &__social-list
+    font-size: 12px
+    display: flex
+    gap: 10px
+    a
+      display: block
+    svg
+      width: 24px
+      height: 24px
+      path
+        fill: $darkgray-color
+        transition: .4s
+  &__menu
+    grid-area: menu
+    display: flex
+    align-items: center
+  &__menu-list
+    display: flex
+    height: 100%
+    align-items: center
+    gap: 12px     
+  &__menu-item  
+    &:not(:first-child)  
+      padding: 0 10px
+    &:first-child
+      padding-right: 10px  
+  &_theme_dark &__menu-list, 
+  &_theme_dark &__logo-link
+    color: $white-color
+  &_theme_light &__menu-list,
+  &_theme_light &__logo-link
+    color: $dark-color  
+  &__button
+    grid-area: button
+    justify-self: end
+    max-width: fit-content
+    padding: 9px 24px
+    border-radius: 38px
+    font-size: 14px
+  &__burger-btn
+    padding: 0   
+    &:hover, &:focus
+      svg
+        
+        path
+          transition: .4s
+          stroke: $darkgray-color
+  &_theme_light &__burger-btn
+    svg
+      path
+        stroke: $dark-color
+    &:hover, &:focus
+      svg
+        path
+          stroke: $darkgray-color  
+  &_theme_light &__button        
+    background-color: $yellow-color
+    &:focus, &:hover
+      background-color: $dark-yellow-color
+      color: $dark-color
+
+  &_theme_dark &__button
+    //background-color: $dark-color
+    color: $yellow-color
+    border: 1px solid $yellow-color
+    transition: 0.4s
+    &:focus, &:hover
+      background-color: $yellow-color
+      color: $dark-color     
+  &.scroll   
+    padding: 20px 0   
+    transition: .4s
+    transform: translateY(-88px)
+  &_theme_dark 
+    &.scroll
+      background-color: $black-color
+      border-bottom: 1px solid $darkgray-color
+  &_theme_light
+    &.scroll    
+      border-bottom: 1px solid #DFDFDF
+  &.scroll &__block-address
+    //display: none
+  &.scroll &__container
+    // grid-template-areas: "logo menu button"
+    grid-template-areas: ". address address" "logo menu button"
+
+  &_theme_dark .fields
+    button
+      color: $white-color
+    &:hover
+      background-color: $white-color  
+      button
+        color: $dark-color
+    ul
+      background-color: $white-color
+
+  &_theme_light .fields
+    button
+      color: $dark-color
+    &:hover
+      background-color: $gray-fields-color
+      color: $dark-color
+    ul
+      background-color: $gray-fields-color  
+
+@media screen and ( max-width: 1200px )
+ .header
+    &__container
+      column-gap: 20px
+    &__menu-list
+      gap: 6px
+    &__menu-item  
+      &:not(:first-child)  
+        padding: 0 5px
+      &:first-child
+        padding-right: 5px 
+
+@media screen and ( max-width: 992px )
+  .header
+    padding: 20px 0
+    &__container
+      display: none
+    &__container-mobile
+      display: flex
+    &.scroll
+      transform: translateY(0)  
+    &_theme_dark 
+      &.scroll       
+        background-color: $dark-color  
+
+@media screen and ( max-width: 576px )
+  .header
+    &__block-logo
+      height: 30px  
+    &__button
+      font-size: 12px
+
+
+        

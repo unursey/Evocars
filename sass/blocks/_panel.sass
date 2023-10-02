@@ -1,0 +1,85 @@
+.panel
+  position: fixed
+  bottom: 0
+  display: flex
+  width: 100%
+  align-self: center
+  justify-content: center
+  z-index: 50
+  opacity: 1
+  transition: opacity .4s ease-in-out
+  &_hide
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+  &_hide &__buttons
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+  &__block
+    max-width: 920px
+    width: 100%   
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 30px
+    background-color: #E0E0E0
+    border-radius: 15px 15px 0px 0px
+    padding: 12px 50px
+    text-align: center
+  &__block-price
+    flex-basis: 306px
+    display: flex
+    gap: 12px
+    justify-content: space-between
+  &__price-text,
+  &__price
+    white-space: nowrap
+    font-size: 24px
+  &__buttons
+    flex-basis: 484px
+    display: flex
+    gap: 18px
+  &__button
+    position: relative
+    width: calc(50% - 9px)
+    font-size: 16px
+    border-radius: 100px
+    padding: 12px 30px 
+
+@media screen and ( max-width: 768px )
+  .panel
+    &__block
+      max-width: calc(100% - 60px)
+      width: 100%   
+      margin: 0 auto
+      display: flex
+      gap: 10px
+    &__button
+      width: 100%
+    &__price
+      font-weight: 500
+    &__block-price, &__buttons
+      flex-direction: column
+      gap: 12px
+    &__block-price
+      text-align: left
+    &__buttons
+      flex-basis: 300px
+
+@media screen and ( max-width: 576px )
+  .panel  
+    &__block
+      padding: 10px 13px
+    &__block-price
+      text-align: left
+    &__button
+      font-size: 12px
+      width: 100%
+      padding: 6px 24.5px
+    &__price-text
+      font-size: 14px
+    &__price
+      font-size: 16px      
+ 

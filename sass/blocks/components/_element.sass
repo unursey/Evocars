@@ -1,0 +1,144 @@
+.element
+  z-index: 180
+  position: relative
+  &__wrap
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    position: absolute
+    min-width: 800px
+    max-height: 1110px
+    width: 100%
+    transition: 0.9s
+
+  &__circle
+    max-width: 1288px
+    width: calc(100% - 4px)
+    height: auto
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    border-radius: 50%
+    box-shadow: 3px 2px 40px 2px #98ABB4
+    z-index: 130
+    background-color: $dark-color
+:root
+  --rad-grad: radial-gradient(circle at center, #ffffff 0, #ffffff 55px, #000000 110px)
+
+.zones
+  width: 33%
+  height: 33%
+  position: absolute
+  z-index: 170
+
+#zone-1
+  top: 0
+  left: 0
+#zone-2
+  top: 0
+  left: 33%
+#zone-3
+  top: 0
+  left: 66%
+#zone-4
+  top: 33%
+  left: 0
+#zone-5
+  top: 33%
+  left: 33%
+#zone-6
+  top: 33%
+  left: 66%
+#zone-7
+  top: 66%
+  left: 0
+#zone-8
+  top: 66%
+  left: 33%
+#zone-9
+  top: 66%
+  left: 66%
+
+#border
+  opacity: 0
+  max-width: 1288px
+  width: calc(100% - 4px)
+  padding-bottom: 100%
+  border-radius: 50%
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 99
+  position: absolute
+  transition: opacity 0.9s, transform 0.9s
+
+#border:after
+  content: ""
+  display: block
+  width: calc(100% - 4px)
+  padding-bottom: 100%
+  border-radius: 50%
+  background: #fff
+  position: absolute
+  transition: all .6s
+  opacity: 0
+  z-index: 400
+
+.zones.active ~ #border,
+.zones:not(.active) ~ #border
+  opacity: 1
+  transition: all .6s
+
+.zones.active ~ #border:after,
+.zones:not(.active) ~ #border:after
+  opacity: 1
+  left: 0
+  top: 0
+  transition: all .6s
+
+
+#zone-1.active ~ #border:after
+  left: -2px
+  top: 0px
+
+#zone-2.active ~ #border:after
+  left: 2px
+  top: -2px
+
+#zone-3.active ~ #border:after
+  left: 6px
+  top: 0px
+
+#zone-4.active ~ #border:after
+  left: -1px
+  top: 2px
+
+#zone-5.active ~ #border:after
+  left: 0
+  top: 1px
+
+#zone-6.active ~ #border:after
+  left: 6px
+  top: 2px
+
+#zone-7.active ~ #border:after
+  left: 0px
+  top: 2px
+
+#zone-8.active ~ #border:after
+  left: 2px
+  top: 2px
+
+#zone-9.active ~ #border:after
+  left: 4px
+  top: 2px
+
+
+@media screen and ( max-width: 576px )
+  .element
+    &__circle
+      max-width: 730px
+    #border
+      opacity: 0
+      max-width: 730px 

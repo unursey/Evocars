@@ -1,0 +1,59 @@
+.pagination
+  display: flex
+  justify-content: center
+  gap: 20px
+  text-align: center
+  font-size: 16px
+  @include stol4
+  &__list
+    display: flex
+    align-items: center
+    gap: 28px
+  &__page,
+  &__button
+    width: 30px
+    height: 30px
+    border-radius: 50px
+  &__page
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid $lightgray-color
+    transition: border .4s
+    &.active
+      border: 1px solid $yellow-color
+      color: $yellow-color
+      pointer-events: none
+      cursor: default
+    &:hover, &:focus
+      cursor: $my-cursor-style
+      border: 1px solid $dark-color
+      a
+        color: $dark-color
+  &__button 
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid  $dark-color
+    padding: 0
+    &:hover, &:focus
+      background-color: $yellow-color
+      border: 1px solid $yellow-color
+      svg
+        path
+          fill: $dark-color
+
+@media screen and ( max-width: 576px )
+  .pagination
+    font-size: 12px
+    gap: 10px
+    &__list
+      gap: 5px
+    &__page,
+    &__button
+      width: 24px
+      height: 24px
+      svg
+        width: 6px
+        height: 10px
+ 

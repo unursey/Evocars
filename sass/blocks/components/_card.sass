@@ -1,0 +1,201 @@
+.card-info
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 32px
+  color: $dark-color
+  &__title-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 20px
+    min-height: 82px
+  &__title
+    display: flex
+    flex-direction: column
+    text-align: right
+  &__name
+    font-size: 32px
+  &__logo
+    width: 149px
+    height: 149px
+    border: 1px solid #DCDCDC
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    padding: 35px 34px
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain  
+  &__img-block
+    height: 316px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    a
+      display: block
+      width: 100%
+      height: 100%
+      img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        object-position: center   
+  &__type
+    color: $darkgray-color     
+  &__block-stock
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__stock
+    display: flex
+    align-items: center
+    gap: 10px
+  &__stock-icon
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    flex-shrink: 0
+    &_color_green
+      background-color: #6ED272
+    &_color_blue
+      background-color: #81BFF9  
+  &__price
+    font-size: 30px
+  &__block-buttons
+    display: flex
+    justify-content: space-between
+    gap: 42px
+  &__button
+    width: 100%
+    font-size: 16px
+    border-radius: 100px
+    text-align: center
+    padding: 12px     
+  &__more
+    display: flex
+    gap: 40px
+    text-align: left
+  &__more-block
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 20px 
+    p
+      font-weight: 300
+      span
+        font-weight: 500
+    &:not(:last-child)
+      &:after 
+        position: absolute
+        content: ''
+        right: -20px
+        top: 17px
+        border: 1px solid $darkgray-color
+        height: 40px    
+  &__link
+    img
+      display: none
+      &:nth-child(1)       
+        display: block
+        
+    &:hover
+      img
+        &:nth-child(1)       
+          display: none
+        &:nth-child(2)
+          display: block
+ 
+@media screen and ( max-width: 1200px )
+  .card-info
+    &__block-buttons
+      gap: 32px
+    &__img-block
+      height: 280px
+
+@media screen and ( max-width: 992px )
+  .card-info
+    &__title-block
+      gap: 10px
+    &__logo
+      width: 129px
+      height: 129px
+      padding: 30px
+    &__name
+      font-size: 28px  
+    &__more
+      display: grid
+      grid-template-columns: repeat(2, auto)
+      gap: 14px 15px    
+    &__more-block    
+      gap: 0
+      &:after
+        display: none
+    &__block-buttons
+      gap: 22px    
+    &__block-stock
+      flex-direction: column
+      gap: 10px
+      align-items: flex-start
+    &__img-block
+      height: 200px
+
+@media screen and ( max-width: 768px )
+  .card-info
+    &__name
+      font-size: 22px    
+    &__logo
+      width: 89px
+      height: 89px
+      padding: 20px 19px
+    &__block-buttons
+      flex-direction: column
+    &__img-block
+      height: 150px
+    &__price
+      font-size: 24px
+
+@media screen and ( max-width: 576px )
+  .card-info
+    gap: 20px
+    &__name
+      font-size: 16px
+    &__logo
+      order: 1
+      width: 49px
+      height: 49px
+      padding: 11px
+    &__title-block
+      gap: 0 
+    &__title
+      text-align: left
+      gap: 8px    
+    &__img-block
+      height: 106px 
+    &__stock
+      gap: 6px
+    &__stock-icon
+      width: 14px
+      height: 14px
+    &__price
+      font-size: 18px
+      font-weight: 500  
+    &__block-buttons
+      gap: 12px
+    &__reserve
+      order: 1
+    &__power
+      order: 3
+    &__time
+      order: 4
+    &__speed
+      order: 2
+    &__button
+      font-size: 14px
+      padding: 8px
+    &__img-block
+      height: 106px  

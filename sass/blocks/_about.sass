@@ -1,0 +1,35 @@
+.about
+  position: relative
+  text-align: center
+  overflow: hidden
+  &__container
+    position: relative
+  &__circle
+    position: absolute
+    top: 140px
+    left: 50%
+    transform: translateX(-50%)
+    width: calc(100% - 150px)
+  &__content
+    max-width: 630px
+    margin: 0 auto 26px
+  &__breadcrumb
+    margin-bottom: 156px
+
+@media screen and ( max-width: 992px )
+  .about
+    &__content
+      max-width: 420px    
+    &__circle
+      top: 110px
+          
+@media screen and ( max-width: 576px )
+  .about
+    padding-bottom: 20px
+    &__content
+      max-width: 320px
+      margin-bottom: 6px   
+    &__circle
+      top: 120px
+    &__breadcrumb
+      margin-bottom: 71px  

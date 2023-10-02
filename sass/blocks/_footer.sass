@@ -1,0 +1,276 @@
+.footer
+  position: relative
+  padding: 70px 0 28px
+  background-color: $lightgray-color
+  color: $dark-color
+  z-index: 10
+  &__bg-dark
+    position: absolute
+    height: 90%
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: $dark-color
+  &__bg-light
+    position: absolute
+    height: 370px
+    top: 0
+    left: 0
+    right: 0
+    z-index: 2
+    background-color: $lightgray-color
+  &__container
+    position: relative
+    display: grid
+    grid-template-columns: minmax(556px, 865px) 1fr
+    grid-template-areas: 'form contacts' 'menu contacts'
+    row-gap: 61px
+    z-index: 10
+    justify-content: space-between
+    align-items: flex-start
+    padding-bottom: 28px
+  &__form-container
+    max-width: 756px
+    grid-area: form
+    display: flex
+    flex-direction: column
+    gap: 40px
+    padding: 40px 60px
+    background-color: $yellow-color
+    color: $dark-color
+    border-radius: 24px
+    text-align: center
+  &__title
+    margin-bottom: 12px
+  &__title-text
+    max-width: 392px
+    margin: 0 auto
+  &__form-block
+    display: grid
+    grid-template-areas: 'name phone' 'comment comment'
+    gap: 19px 20px
+    text-align: left
+    margin-bottom: 48px
+  &__label
+    color: $darkgray-color  
+  &__form-name
+    grid-area: name
+  &__form-phone
+    grid-area: phone
+  &__form-comment
+    grid-area: comment
+  &__button-block
+    align-items: flex-start
+    text-align: left 
+  &__button
+    background-color: $dark-color
+    color: $lightgray-color
+    border-radius: 100px
+    padding: 11.5px 35.5px
+    border: 1px solid $dark-color
+    text-wrap: nowrap
+    &:hover, &:focus
+      background-color: transparent
+      color: $dark-color
+  &__subtitle
+    margin-bottom: 28px
+  &__contacts-block
+    grid-area: contacts
+    max-width: max-content
+    min-width: 360px
+    text-align: center
+    padding-left: 30px
+    padding-top: 364px
+    color: $lightgray-color
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 16px   
+  &__phone
+    font-size: 20px
+  &__text-phone
+    font-size: 12px
+  &__mail
+    font-size: 18px
+  &__social-list
+    display: flex
+    justify-content: center
+    gap: 10px
+    a
+      display: block
+    svg
+      width: 24px
+      height: 24px
+      path
+        fill: $yellow-color
+        transition: .4s
+    a
+      &:hover, &:focus
+        svg
+          path
+            fill: $lightgray-color
+            transition: .4s
+  &__button-call
+    font-size: 14px
+    @include stolb
+    border-radius: 100px
+    padding: 12.5px 35.5px
+    align-self: center
+    text-wrap: nowrap
+  &__menu-block
+    grid-area: menu
+    display: flex
+    gap: 58px
+    justify-content: flex-start
+    color: $lightgray-color
+  &__logo-block
+    display: flex
+    flex-direction: column
+    gap: 25px
+    max-width: 190px
+  &__logo
+    align-self: flex-start
+    @include unb7
+    font-size: 24px
+    height: 45px
+    img
+      height: 100%
+      object-fit: contain
+  &__menu-list
+    flex-basis: 580px
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    gap: 13px 35px
+    white-space: nowrap
+  &__menu-item
+    font-size: 14px
+    a
+      &:hover, &:focus-visible
+        color: $yellow-color
+  &__copy
+    position: relative
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    justify-content: space-between
+    gap: 30px
+    font-size: 12px
+    color: #9A9A9A
+    padding-top: 28px
+    border-top: 1px solid #9A9A9A
+    z-index: 10
+    p:last-child
+      justify-self: end
+  &__contacts-address
+    display: none
+
+@media screen and ( max-width: 1200px )
+  .footer
+    &__bg-light
+      height: 390px
+    &__menu-block
+      flex-direction: column
+    &__menu-list
+      max-width: 450px
+      flex-basis: 0
+    &__logo-address
+      display: none
+    &__contacts-address
+      max-width: 190px
+      margin: 0 auto
+      display: block
+
+@media screen and ( max-width: 992px )
+  .footer
+    &__container
+      grid-template-columns: 2fr 1fr
+      column-gap: 0px
+      grid-template-areas: 'form form' 'menu contacts'
+    &__form-container
+      max-width: 100% 
+    &__contacts-block
+      padding: 0
+      justify-self: end
+    &__menu-list
+      text-wrap: nowrap
+      grid-template-columns: repeat(2, auto)
+      flex-basis: 0
+
+@media screen and ( max-width: 800px )
+  .footer
+    &__container
+      grid-template-columns: 1fr 1fr
+      column-gap: 19px
+    &__menu-list
+      display: flex
+      flex-direction: column
+    &__item
+      &:nth-child(1)
+        order: 1
+      &:nth-child(2)
+        order: 4
+      &:nth-child(3)
+        order: 3
+      &:nth-child(4)
+        order: 9
+      &:nth-child(5)
+        order: 6
+      &:nth-child(6)
+        order: 5
+      &:nth-child(7)
+        order: 2
+      &:nth-child(8)
+        order: 8
+      &:nth-child(9)
+        order: 7  
+    &__contacts-block
+      min-width: 170px
+
+@media screen and ( max-width: 576px )
+  .footer
+    padding: 40px 0 12px
+    &__container
+      row-gap: 28px
+    &__form-container
+      gap: 20px
+      padding: 40px 20px
+      margin-bottom: 12px
+    &__form-block
+      grid-template-areas: 'name' 'phone' 'comment'
+      gap: 14px
+      margin-bottom: 20px
+    &__phone
+      font-size: 18px
+    &__mail
+      font-size: 16px 
+    &__button-block
+      flex-direction: column
+      text-align: center
+    &__subtitle
+      margin-bottom: 40px
+    &__button-call
+      font-size: 12px
+      padding: 13.5px 30.5px
+    &__menu-block
+      gap: 22px  
+    &__menu-list
+      gap: 10px
+      text-wrap: wrap
+    &__menu-item
+      font-size: 12px
+    &__contacts-block
+      max-width: 180px
+      justify-self: start                   
+    &__contacts
+      gap: 20px
+    &__social-list
+      display: flex
+      justify-content: center
+      gap: 4px 
+    &__copy
+      display: flex
+      text-align: center
+      flex-direction: column
+      gap: 10px
+    &__logo
+      height: 40px  

@@ -1,0 +1,76 @@
+.select
+  position: relative
+  display: block
+  max-width: 417px
+  width: 100%
+  color: $darkgray-color
+  margin-top: 16px
+.new-select
+  position: relative
+  cursor: $my-cursor-style
+  user-select: none
+  background: linear-gradient(210.54deg, rgba(255, 255, 255, 0.29) -19.51%, rgba(255, 255, 255, 0.08) 81.45%)
+  border: 1px solid #DFDFDF
+  border-radius: 4px
+  padding: 13px 36px 13px 28px
+  &__list
+    position: absolute
+    top: 51px
+    left: 0
+    width: 100%
+    max-height: 360px
+    overflow-x: scroll 
+    cursor: $my-cursor-style
+    z-index: 2
+    border-width: 0px 1px 1px 1px
+    border-style: solid
+    border-color: #DFDFDF
+    border-radius: 0px 0px 8px 8px
+    background: $lightgray-color
+    user-select: none
+    padding: 16px 28px
+    &::-webkit-scrollbar
+      display: none
+  &__list.on
+    display: block
+  &__item span
+    display: block
+  &__item:not(:last-child)  
+    margin-bottom: 14px
+  &__item span:hover
+    color: $dark-yellow-color
+  &:after
+    content: ''
+    display: block
+    width: 24px
+    height: 24px
+    position: absolute
+    right: 16px
+    top: 12.5px
+    background: url('../img/icons/select.svg') no-repeat right center / cover
+
+    -webkit-transition: all .27s ease-in-out
+    -o-transition: all .27s ease-in-out
+    transition: all .27s ease-in-out
+
+    -webkit-transform: rotate(0deg)
+    -ms-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+  &.on:after
+    -webkit-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    transform: rotate(180deg)
+.new-span:hover
+  color: $dark-yellow-color
+
+@media screen and ( max-width: 992px )
+  .select
+    margin-top: 10px
+  .new-select
+    padding: 10.5px 16px
+    &__list
+      top: 43.5px
+      padding: 18px 16px
+      max-height: 90px

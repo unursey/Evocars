@@ -1,0 +1,121 @@
+.burger
+  position: fixed
+  width: 100%
+  height: 100%  
+  top: 0
+  left: 0
+  background-color: rgba(0, 0, 0, 0.05)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  transition: 0.3s ease-in-out
+  visibility: hidden
+  overflow: auto
+  z-index: 1100
+  opacity: 0
+  &__section
+    width: 100%
+    background-color: $white-color
+    padding: 20px 0 52px
+  &_visible &__container 
+    opacity: 1
+  &__container
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 53px    
+    background-color: $white-color
+    color: $dark-color
+    opacity: 0    
+  &_visible &__container
+    opacity: 1
+    z-index: 95
+    transition: 0.6s ease-in-out
+  &__title
+    font-size: 20px
+    font-weight: 700
+    @include unb7
+    margin-bottom: 28px
+  &__block-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__section-block
+    display: flex
+    gap: 20px
+    justify-content: space-around
+  &__menu, &__block-address
+    max-width: 220px
+    margin: 0 auto
+  &__block-address
+    text-align: center
+  &__logo
+    display: block
+    height: 45px
+    font-weight: 700
+    @include unb7
+    img
+      height: 100%
+      object-fit: contain 
+  &__btn-close
+    padding: 0
+    &:hover, &:focus
+      svg
+        path
+          stroke: $darkgray-color
+  &__menu-list
+    display: flex
+    flex-direction: column
+    gap: 16px
+    font-size: 14px
+  &__block
+    display: flex
+    flex-direction: column
+    gap: 20px
+  &__social-list
+    display: flex
+    gap: 12px
+    align-items: center
+    justify-content: center
+    a
+      display: block
+    svg
+      width: 24px
+      height: 24px
+      path
+        fill: $dark-color  
+  &__button
+    padding: 14px 42px
+    border-radius: 100px
+    font-size: 12px
+  &__phone
+    font-size: 22px
+  &__text-phone
+    font-size: 12px
+  &__mail
+    font-size: 20px
+  &__text
+    font-size: 14px    
+
+@media screen and ( max-width: 992px )
+  .burger
+    &_visible
+      opacity: 1
+      visibility: visible
+
+@media screen and ( max-width: 576px )
+  .burger
+    &__title
+      font-size: 20px
+    &__container
+      min-height: 100vh
+    &__section-block
+      flex-direction: column
+      gap: 40px
+    &__block-address
+      max-width: 284px
+    &__menu
+      max-width: 200px 
+    &__section
+      padding: 20px 0 32px   
+    &__logo
+      height: 30px

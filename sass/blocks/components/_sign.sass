@@ -1,0 +1,70 @@
+.sign
+  display: grid
+  grid-template-columns: 41% 49%
+  grid-template-rows: minmax(280px, 416px)
+  justify-content: space-between
+  align-items: center
+  gap: 40px
+  &__title
+    margin-bottom: 60px  
+  &__block-img
+    height: 100%
+    width: 100%
+    overflow: hidden
+    border-radius: 16px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+  &__text
+    margin-bottom: 40px
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+  &__button
+    display: flex
+    position: relative
+    font-size: 16px
+    padding: 16px 62px 16px 28px
+    align-self: flex-start
+    border-radius: 31px
+    &:after
+      position: absolute
+      content: ''
+      width: 24px
+      height: 24px
+      right: 28px
+      top: 50%
+      transform: translateY(-50%)
+      background-image: url('../img/icons/arrow.svg')
+      background-size: contain
+
+@media screen and ( max-width: 992px )
+  .sign 
+    grid-template-columns: 46% 46%        
+
+@media screen and ( max-width: 768px )
+  .sign  
+    display: flex
+    flex-direction: column
+    &__title
+      margin-bottom: 30px   
+    &__block-img
+      height: 400px  
+@media screen and ( max-width: 576px )
+  .sign
+    &__title
+      margin-bottom: 20px
+    &__button
+      font-size: 14px
+      align-self: center
+      &_leasing
+        font-size: 16px
+        align-self: flex-start
+    &__block-img
+      height: 280px
+    &__text
+      &_leasing
+        margin-bottom: 20px  
